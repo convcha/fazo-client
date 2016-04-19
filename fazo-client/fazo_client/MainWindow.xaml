@@ -1,12 +1,14 @@
 ﻿<Window
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:ViewModels;assembly=fazo_client"
+    xmlns:views="clr-namespace:Views;assembly=fazo_client"
+    xmlns:viewmodels="clr-namespace:ViewModels;assembly=fazo_client"
     xmlns:fsxaml="http://github.com/fsprojects/FsXaml"
-    Title="MVVM and XAML Type provider" Height="200" Width="400">
+    Title="MVVM and XAML Type provider" Height="200" Width="400"
+    fsxaml:ViewController.Custom="{x:Type views:MainWindowViewController}">
     <Window.DataContext>
-        <local:MainViewModel/>
+        <viewmodels:MainViewModel/>
     </Window.DataContext>
-    <Grid>    
+    <Grid>
     </Grid>
 </Window>
